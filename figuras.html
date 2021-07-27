@@ -6,49 +6,208 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figuras Geométricas | Prácticas JavaScript
     </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
 </head>
 <body>
     <header>
-        <h1>Figuras Geométricas</h1>
-        <p>Primer taller del curso práctico de JavaScript</p>
+        <section class="hero is-primary">
+            <div class="hero-body">
+                <h1 class="title is-1">Figuras Geométricas</h1>
+                <p class="subtitle">Primer taller del curso práctico de JavaScript</p>
+            </div>
+        </section>
     </header>
     <main>
-        <section>
-            <h2>Cuadrado</h2>
-            <form>
-                <label for="inputCuadrado">Escribe cuánto miden cada lado de tu cuadrado:</label>
-                <input id="inputCuadrado" type="number">
-                <button type="button" onclick="calcularPerimetroCuadrado()">Calcular Perímetro</button>
-                <button type="button" onclick="calcularAreaCuadrado()">Calcular Área</button>
-            </form>
-        </section>
-        <section>
-            <h2>Triángulo</h2>
-            <form>
-                <p>Escribe cuánto miden cada lado de tu triángulo</p>
-                <label for="lado1Triangulo">Escribe cuánto mide el lado 1 de tu triángulo</label>
-                <input id="lado1Triangulo" type="number">
-                <label for="lado2Triangulo">Escribe cuánto mide el lado 2 de tu triángulo</label>
-                <input id="lado2Triangulo" type="number">
-                <label for="baseTriangulo">Escribe cuánto mide la base de tu triángulo</label>
-                <input id="baseTriangulo" type="number">
-                <label for="alturaTriangulo">Escribe cuánto mide la altura de tu triángulo</label>
-                <input id="alturaTriangulo" type="number">
-                <button type="button" onclick="calcularPerimetroTriangulo()">Calcular Perímetro</button>
-                <button type="button" onclick="calcularAreaTriangulo()">Calcular Área</button>
-            </form>
-        </section>
-        <section>
-            <h2>Círculo</h2>
-            <form>
-                <label for="radioCirculo">Escribe cuánto miden el radio de tu círculo</label>
-                <input id="radioCirculo" type="number">
-                <button type="button" onclick="calcularDiametroCirculo()">Calcular Diametro</button>
-                <button type="button" onclick="calcularPerimetroCirculo()">Calcular Perímetro</button>
-                <button type="button" onclick="calcularAreaCirculo()">Calcular Área</button>
-            </form>
+        <section class="section">
+            <div class="container">
+                
+                <div class="columns block box">
+                    <div class="column">
+                        <h2 class="title is-3">Cuadrado</h2>
+                        <form>
+                            <div class="columns">
+                                <div class="column is-full-mobile is-half-desktop">
+                                    <label 
+                                        for="inputCuadrado"
+                                        class="label"
+                                    >Escribe cuánto miden cada lado de tu cuadrado:</label>
+                                    <input 
+                                        id="inputCuadrado" 
+                                        type="number"
+                                        class="input is-medium" 
+                                        placeholder="Lado de Cuadrado"
+                                    >
+                                </div>
+                            </div>
+                            <div class="columns">
+                                <div 
+                                    class="column is-full-mobile is-one-fifth-desktop"
+                                >
+                                    <button 
+                                        type="button" 
+                                        onclick="calcularPerimetroCuadrado()"
+                                        class="button is-large is-link"
+                                    >Calcular Perímetro</button>
+                                </div>
+                                <div 
+                                    class="column is-full-mobile is-one-fifth-desktop"
+                                >
+                                    <button 
+                                        type="button" 
+                                        onclick="calcularAreaCuadrado()"
+                                        class="button is-large is-link"
+                                    >Calcular Área</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="columns block box">
+                    <div class="column">
+                        <h2 class="title is-3">Triángulo</h2>
+                        <form>
+                            <div class="columns">
+                                <div class="column is-full-mobile is-full-desktop">
+                                    <p class="subtitle">Escribe cuánto miden cada lado de tu triángulo</p>
+                                </div>
+                            </div>
+                            <div class="columns">
+                                <div class="column is-full-mobile is-half-desktop">
+                                    <label 
+                                        for="lado1Triangulo"
+                                        class="label"
+                                    >Escribe cuánto mide el lado 1 de tu triángulo</label>
+                                    <input 
+                                        id="lado1Triangulo" type="number"
+                                        class="input is-medium"
+                                        placeholder="Lado 1"
+                                    >
+                                </div>
+                                <div class="column is-full-mobile is-half-desktop">
+                                    <label 
+                                        for="lado2Triangulo"
+                                        class="label"
+                                    >Escribe cuánto mide el lado 2 de tu triángulo</label>
+                                    <input 
+                                        id="lado2Triangulo" 
+                                        type="number"
+                                        class="input is-medium"
+                                        placeholder="Lado 2"
+                                    >
+                                </div>
+                            </div>
+                            <div class="columns">
+                                <div class="column is-full-mobile is-half-desktop">
+                                    <label 
+                                        for="baseTriangulo"
+                                        class="label"
+                                    >Escribe cuánto mide la base de tu triángulo</label>
+                                    <input 
+                                        id="baseTriangulo" 
+                                        type="number"
+                                        class="input is-medium"
+                                        placeholder="Base de triángulo"
+                                    >
+                                </div>
+                                <div class="column is-full-mobile is-half-desktop">
+                                    <label 
+                                        for="alturaTriangulo"
+                                        class="label"
+                                    >Escribe cuánto mide la altura de tu triángulo</label>
+                                    <input 
+                                        id="alturaTriangulo" 
+                                        type="number"
+                                        class="input is-medium"
+                                        placeholder="Altura de triángulo"
+                                    >
+                                </div>
+                            </div>
+                            <div class="columns">
+                                <div 
+                                    class="column is-full-mobile is-one-fifth-desktop"
+                                >
+                                    <button 
+                                        type="button" 
+                                        onclick="calcularPerimetroTriangulo()"
+                                        class="button is-large is-link"
+                                    >Calcular Perímetro</button>
+                                </div>
+                                <div 
+                                    class="column is-full-mobile is-one-fifth-desktop"
+                                >
+                                    <button 
+                                        type="button" 
+                                        onclick="calcularAreaTriangulo()"
+                                        class="button is-large is-link"
+                                    >Calcular Área</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="columns block box">
+                    <div class="column">
+                        <h2 class="title is-3">Círculo</h2>
+                        <form>
+                            <div class="columns">
+                                <div class="column is-full-mobile is-half-desktop">
+                                    <label 
+                                        for="radioCirculo"
+                                        class="label"
+                                    >Escribe cuánto miden el radio de tu círculo</label>
+                                    <input 
+                                        id="radioCirculo" 
+                                        type="number"
+                                        class="input is-medium"
+                                        placeholder="Radio de Círculo"
+                                    >
+                                </div>
+                            </div>
+                            <div class="columns">
+                                <div class="column is-full-mobile is-one-fifth-desktop">
+                                    <button 
+                                        type="button" 
+                                        onclick="calcularDiametroCirculo()"
+                                        class="button is-large is-link"
+                                    >Calcular Diametro</button>
+                                </div>
+                                <div class="column is-full-mobile is-one-fifth-desktop">
+                                    <button 
+                                        type="button" 
+                                        onclick="calcularPerimetroCirculo()"
+                                        class="button is-large is-link"
+                                    >Calcular Perímetro</button>
+                                </div>
+                                <div class="column is-full-mobile is-one-fifth-desktop">
+                                    <button 
+                                        type="button" 
+                                        onclick="calcularAreaCirculo()"
+                                        class="button is-large is-link"
+                                    >Calcular Área</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <br>
+            </div>
         </section>
     </main>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Figuras Geométricas</strong> por <a href="https://twitter.com/fherponcio" target="_blank">Fernando Poncio</a>. Curso Práctico de JavaScript de Platzi.
+            </p>
+        </div>
+    </footer>
 
     <script src="./figuras.js"></script>
 </body>
