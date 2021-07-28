@@ -54,6 +54,58 @@ const calcularAreaTriangulo = () => {
 
     alert(area);
 }
+const calcularAlturaIsosceles = () => {
+    const lado1 = document.getElementById("lado1Triangulo").value;
+    const lado2 = document.getElementById("lado2Triangulo").value;
+    const base = document.getElementById("baseTriangulo").value;
+
+    const ladosAB = verificarTrianguloIsosceles(lado1, lado2, base);
+
+    if (ladosAB.esIsosceles) {
+        alert("El triángulo SÍ es Isósceles");
+        const alturaIsosceles = alturaTrianguloIsosceles(ladosAB.a, ladosAB.b);
+        alert("La Altura del Triángulo Isósceles es: " + alturaIsosceles);
+    }
+    else {
+        alert("El triángulo NO es Isósceles");
+    }
+}
+
+const verificarTrianguloIsosceles = (lado1, lado2, lado3) => {
+    let ladosAB = {
+        esIsosceles: false
+    };
+
+    if (lado1 === lado2) {
+        ladosAB = {
+            esIsosceles: true,
+            a: lado1,
+            b: lado3
+        }
+    }
+    else if (lado1 === lado3) {
+        ladosAB = {
+            esIsosceles: true,
+            a: lado1,
+            b: lado2
+        }
+    }
+    else if (lado2 === lado3) {
+        ladosAB = {
+            esIsosceles: true,
+            a: lado2,
+            b: lado1
+        }
+    }
+
+    return ladosAB;
+}
+
+const alturaTrianguloIsosceles = (a, b) => {
+    const h = Math.sqrt( Math.pow(a, 2) - ( Math.pow(b, 2) / 4 ) );
+
+    return h;
+}
 
 // Circulo
 const calcularDiametroCirculo = () => {
