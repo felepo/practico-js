@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porcentajes y Descuentos | Curso Práctico de JavaScript</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+<body>
+    <header>
+        <section class="hero is-primary">
+            <div class="hero-body">
+                <h1 class="title is-1">Porcentajes y Descuentos</h1>
+                <p class="subtitle">Este es el segundo taller del Curso Práctico de JavaScript</p>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+
+                <div class="columns block box">
+                    <div class="column">
+                        <h2 class="title is-3">Calcula el precio a pagar de tus productos por descuento.</h2>
+                        <form>
+                            <!-- Campos -->
+                            <div class="columns">
+                                <div class="column is-full-mobile is-half-desktop">
+                                    <label 
+                                        for="inputPrice"
+                                        class="label"
+                                    >Escribe el precio de tu producto</label>
+                                    <input 
+                                        id="inputPrice" 
+                                        type="number"
+                                        class="input is-medium"
+                                        placeholder="Precio de Producto"
+                                    />
+                                </div>
+                                <div class="column is-full-mobile is-half-desktop">
+                                    <label 
+                                        for="inputDiscount"
+                                        class="label"
+                                    >Escribe el descuento de tu producto</label>
+                                    <input 
+                                        id="inputDiscount" 
+                                        type="number"
+                                        class="input is-medium"
+                                        placeholder="Descuento de Producto"
+                                    />
+                                </div>
+                            </div>
+                            <!-- Cupones -->
+                            <div class="columns">
+                                <div 
+                                    class="column is-full-mobile is-two-fifths-desktop"
+                                    style="display: flex;"
+                                >
+                                    <label for="inputCupon">¿Tienes un Cupón?</label>
+                                    <input 
+                                        id="inputCupon" 
+                                        type="text"
+                                        placeholder="Ingrese Cupón"
+                                        class="input is-medium"
+                                    >
+                                    <button 
+                                        type="button"
+                                        class="button is-danger"
+                                        onclick="aplicarCupon()"
+                                    >Aplicar</button>
+                                    <p id="textoCupon"></p>
+                                    <input 
+                                        id="nuevoDescuento" 
+                                        type="number" 
+                                        value="0"
+                                        hidden
+                                    >
+                                </div>
+                            </div>
+                            <!-- Botón de Cálculo -->
+                            <div class="columns">
+                                <div class="column is-full-mobile is-one-fifth-desktop">
+                                    <button 
+                                        type="button" 
+                                        onclick="onClickButtonPriceDiscount()"
+                                        class="button is-large is-link"
+                                    >Calcular el precio con descuento</button>
+                                </div>
+                            </div>
+                            <!-- Resultado -->
+                            <div class="colums">
+                                <div class="column">
+                                    <p id="resultPrice" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+
+    <script src="./descuentos.js"></script>
+</body>
+</html>
